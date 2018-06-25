@@ -59,5 +59,14 @@ order by namdr;
 SELECT b.namdr, b.snamdr FROM tdr b
 order by snamdr;
 
+/*Реализация 3. */
+SELECT b.namdr FROM tdr b
+WHERE b.namdr = b.snamdr
+order by namdr;
+
+
+
+/*"*" - это если выборку со всеми полями, без * - выборка только с запрашиваемых полей*/
+
 
 

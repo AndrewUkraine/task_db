@@ -3,7 +3,7 @@ DROP TABLE IF EXISTS tdr;
 
 CREATE TABLE tatus
 (
-  kods    SMALLINT DEFAULT NULL,
+  kods    SMALLINT PRIMARY KEY DEFAULT NULL,
   kodsz   CHAR(2)  DEFAULT 'Y',
   nams    CHAR(30) DEFAULT 'Y',
   kodstol INTEGER  DEFAULT NULL ,
@@ -23,7 +23,7 @@ CREATE TABLE tatus
 );
 
 CREATE TABLE tdr (
-  kods    SMALLINT DEFAULT NULL,
+  kods    SMALLINT  DEFAULT NULL,
   koddr   SMALLINT DEFAULT NULL,
   koddrs  CHAR(1)  DEFAULT 'Y',
   koddr3  CHAR(3)  DEFAULT 'Y',
@@ -45,5 +45,6 @@ CREATE TABLE tdr (
   codvcdr SMALLINT DEFAULT NULL,
   datn    DATE     DEFAULT CURRENT_DATE,
   datk    DATE     DEFAULT CURRENT_DATE,
-  kodpl   CHAR(20) DEFAULT '1,[]' NOT NULL
+  kodpl   CHAR(20) DEFAULT '1,[]' NOT NULL,
+  FOREIGN KEY (kods) REFERENCES tatus (kods) ON DELETE CASCADE
 );
