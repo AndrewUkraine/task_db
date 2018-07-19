@@ -1,6 +1,5 @@
 import java.sql.*;
 
-import static sun.plugin.javascript.navig.JSType.URL;
 
 public class TestTicketUa {
 
@@ -8,7 +7,6 @@ public class TestTicketUa {
     private final String HOST = "jdbc:postgresql://localhost:5433/test_Ticket.ua";
     private final String USENAME = "user";
     private final String PASSWORD = "password";
-
 
     private Connection connection;
 

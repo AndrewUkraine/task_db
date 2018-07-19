@@ -6,9 +6,7 @@ public class Main {
         TestTicketUa testTicketUa = new TestTicketUa();
 
 
-        String query = "SELECT * FROM tdr b\n" +
-                "WHERE CURRENT_DATE BETWEEN b.datn AND b.datk\n" +
-                "ORDER BY kods;";
+        String query = "SELECT kods FROM tatus";
 
         try {
             Statement statement = testTicketUa.getConnection().createStatement();
@@ -17,7 +15,7 @@ public class Main {
 
 
             while (resultSet.next()){
-                System.out.println(resultSet.getString(2));
+                System.out.println(resultSet.getString("kods"));
             }
 
 

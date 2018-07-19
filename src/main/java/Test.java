@@ -5,8 +5,18 @@ public class Test {
 
 
     public static void main(String[] args) {
-     Test.chengingPlace();
+     Test.reversCIFR();
 
+     Test test = new Test();
+     test.max();
+
+
+    }
+
+    public static void udalitCastSlovaPosleZnaka (){
+        String chapterNumber = "абвг | де ёжз";
+        String mainChapterNum = chapterNumber.substring(0, chapterNumber.indexOf("|"));
+        System.out.println(mainChapterNum); //абвг
     }
 
     public  int  max (){
@@ -79,7 +89,6 @@ public class Test {
             mass[mass.length-i-1] =c;
             }
         System.out.println(Arrays.toString(mass));
-
     }
 
 /*формула j=n-i+1 - ищем пару */
@@ -166,10 +175,28 @@ public class Test {
     }
 
 
+    public static void tablicaUmnogenia (){
 
-    public static void privet (){
-
+        for (int a=1; a<11; a++) {
+            for (int i = 1; i < 11; i++) {
+                System.out.print(i*a + ", ");
+            }
+            System.out.println("");
+        }
     }
+
+    public static void vivod () {
+
+        for (int i = 0; i <= 10; i++) {
+            for (int j = i; j > 0; j--) {
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+
+
+
 
 
 }
